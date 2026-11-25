@@ -1,0 +1,46 @@
+{
+  "scope": "3 convenience-sampled cached incidents, one per system; not representative",
+  "weight_warning": "0.1 missing penalty is a toy engineering parameter, not a validated score",
+  "cases": [
+    {
+      "system": "tt",
+      "log_rows": 7434,
+      "span_rows": 17443,
+      "valid_log_id_rows": 7050,
+      "exact_matched_log_rows": 7012,
+      "exact_match_percent": 94.32,
+      "unique_matched_span_keys": 2677,
+      "duplicate_span_keys": 0,
+      "native_unmatched_log_keys": 11
+    },
+    {
+      "system": "hs",
+      "log_rows": 7085,
+      "span_rows": 5787,
+      "valid_log_id_rows": 7085,
+      "exact_matched_log_rows": 2234,
+      "exact_match_percent": 31.53,
+      "unique_matched_span_keys": 1315,
+      "duplicate_span_keys": 0,
+      "native_unmatched_log_keys": 2821
+    },
+    {
+      "system": "otel",
+      "log_rows": 1194,
+      "span_rows": 4526,
+      "valid_log_id_rows": 941,
+      "exact_matched_log_rows": 804,
+      "exact_match_percent": 67.34,
+      "unique_matched_span_keys": 554,
+      "duplicate_span_keys": 1388,
+      "native_unmatched_log_keys": 85
+    }
+  ],
+  "checks": {
+    "exact_witness_survives_hidden_span": 3,
+    "wrong_request_rejected": 3,
+    "all_passed": true
+  },
+  "nominal_top1_correct_cases": 0,
+  "case_level_identifiers_and_labels_omitted": true
+}

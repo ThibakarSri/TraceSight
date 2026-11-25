@@ -1,0 +1,9 @@
+{
+  "fixture_returned_success": true,
+  "hidden_record_ids": [
+    "E2"
+  ],
+  "mask_reason": "deliberate experiment removal; not a collector fault",
+  "fixture_sha256": "c872c9c2c6001700f69ed27e9fcbc85e7f4691b0bf7348840ac94a7c13d1fc18",
+  "note": "Not an inference input. No incident root label is assigned."
+}

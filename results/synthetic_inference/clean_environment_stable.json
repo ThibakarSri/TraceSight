@@ -1,0 +1,102 @@
+{
+  "scope": "software_test_only",
+  "examined_assignments": 2,
+  "compatible_states": 2,
+  "complete": true,
+  "seconds": 0.00019992400007140532,
+  "sources": {
+    "definition": "Software fixture: base scores and terms are illustrative assumptions, not empirical fault evidence."
+  },
+  "constraint_sources": {},
+  "score_definition": {
+    "base": {
+      "Payment": 2.0,
+      "Bank": 0.0
+    },
+    "terms": [
+      {
+        "service": "Payment",
+        "when": [
+          [
+            "shared",
+            "high"
+          ]
+        ],
+        "value": 10.0,
+        "sources": [
+          "definition"
+        ]
+      },
+      {
+        "service": "Bank",
+        "when": [
+          [
+            "shared",
+            "high"
+          ]
+        ],
+        "value": 10.0,
+        "sources": [
+          "definition"
+        ]
+      }
+    ]
+  },
+  "guarantee": "Relative to supplied constraints and scorer only; not root correctness",
+  "status": "stable",
+  "stable_first": [
+    "Payment"
+  ],
+  "undominated_candidates": [
+    "Payment"
+  ],
+  "comparisons": [
+    {
+      "left": "Payment",
+      "right": "Bank",
+      "minimum_margin": 2.0,
+      "always_above": true,
+      "minimising_state": {
+        "shared": "low"
+      }
+    },
+    {
+      "left": "Bank",
+      "right": "Payment",
+      "minimum_margin": -2.0,
+      "always_above": false,
+      "minimising_state": {
+        "shared": "low"
+      }
+    }
+  ],
+  "score_ranges": {
+    "Payment": [
+      2.0,
+      12.0
+    ],
+    "Bank": [
+      0.0,
+      10.0
+    ]
+  },
+  "baselines": {
+    "observed_only": [
+      "Payment",
+      "Bank"
+    ],
+    "first_feasible_state": [
+      "Payment",
+      "Bank"
+    ],
+    "independent_range_stable_first": []
+  },
+  "tie_policy": "Baseline lists use service-name tie breaks; ties are not strict dominance",
+  "run": {
+    "version": "0.1.0",
+    "python": "3.12.14",
+    "elapsed_seconds": 0.0010081540001465328,
+    "peak_python_allocated_bytes": 7847,
+    "memory_note": "tracemalloc excludes some native-library allocations; not peak RSS"
+  }
+}

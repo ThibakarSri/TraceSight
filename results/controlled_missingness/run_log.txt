@@ -1,0 +1,23 @@
+original records=2 histories=1 facts={'payment.entered': 'yes', 'payment.completed': 'yes'} status=stable stable=['Checkout'] shortlist=['Checkout']
+    {'state': {'payment.entered': 'yes', 'payment.completed': 'yes'}, 'scores': {'Checkout': 6.0, 'Payment': 2.0}, 'winners': ['Checkout']}
+masked   records=1 histories=2 facts={'payment.entered': 'yes', 'payment.completed': 'unknown'} status=ambiguous stable=[] shortlist=['Checkout', 'Payment']
+    {'state': {'payment.entered': 'yes', 'payment.completed': 'no'}, 'scores': {'Checkout': 6.0, 'Payment': 9.0}, 'winners': ['Payment']}
+    {'state': {'payment.entered': 'yes', 'payment.completed': 'yes'}, 'scores': {'Checkout': 6.0, 'Payment': 2.0}, 'winners': ['Checkout']}
+restored records=2 histories=1 facts={'payment.entered': 'yes', 'payment.completed': 'yes'} status=stable stable=['Checkout'] shortlist=['Checkout']
+    {'state': {'payment.entered': 'yes', 'payment.completed': 'yes'}, 'scores': {'Checkout': 6.0, 'Payment': 2.0}, 'winners': ['Checkout']}
+PASS fixture returned success
+PASS exactly one observation removed
+PASS entry survives masking
+PASS completion becomes unknown
+PASS history count expands 1 to 2
+PASS original stable Checkout
+PASS masked ambiguous with two rivals
+PASS restored logical result matches original
+PASS scorer fixed across variants
+PASS masked sources exclude hidden record
+PASS wrong retry success rejected
+PASS unreviewed emitter rejected
+PASS no success witness emitted on unsuccessful fixture path
+PASS missing attempt rejected
+PASS absence does not imply failure
+15/15 checks passed

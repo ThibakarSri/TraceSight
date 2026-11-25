@@ -1,0 +1,93 @@
+{
+  "services": [
+    "Checkout",
+    "Payment"
+  ],
+  "variables": [
+    {
+      "name": "payment.entered",
+      "domain": [
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "name": "payment.completed",
+      "domain": [
+        "no",
+        "yes"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "name": "witness_0_handler_started",
+      "variables": [
+        "payment.entered"
+      ],
+      "allowed": [
+        [
+          "yes"
+        ]
+      ],
+      "sources": [
+        "E1",
+        "WR-01"
+      ]
+    },
+    {
+      "name": "stage_order",
+      "variables": [
+        "payment.entered",
+        "payment.completed"
+      ],
+      "allowed": [
+        [
+          "no",
+          "no"
+        ],
+        [
+          "yes",
+          "no"
+        ],
+        [
+          "yes",
+          "yes"
+        ]
+      ],
+      "sources": [
+        "ORDER"
+      ]
+    }
+  ],
+  "base": {
+    "Checkout": 6.0,
+    "Payment": 2.0
+  },
+  "terms": [
+    {
+      "service": "Payment",
+      "when": [
+        [
+          "payment.entered",
+          "yes"
+        ],
+        [
+          "payment.completed",
+          "no"
+        ]
+      ],
+      "value": 7.0,
+      "sources": [
+        "SCORE"
+      ]
+    }
+  ],
+  "sources": {
+    "E1": "Synthetic observed record E1: handler_started",
+    "WR-01": "Reviewed fixture.py; version controlled-fixture-1; SHA256 c872c9c2c6001700f69ed27e9fcbc85e7f4691b0bf7348840ac94a7c13d1fc18",
+    "ORDER": "Declared fixture model: successful completion requires entry; no terminal-failure claim from no completion.",
+    "SCORE": "Fixed illustrative scores selected for the software test only; not calibrated or learned."
+  },
+  "scope": "synthetic_controlled_masking_only"
+}

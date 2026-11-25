@@ -1,0 +1,2 @@
+# Dataset feasibility
+`three_case/` retains the historical small association and controlled span-hiding smoke test. `full_audit/` is the later 455-case structural survey. Neither certifies application witness semantics or diagnoses collector loss. See the corresponding aggregate reports under `results/data_feasibility/`. The original standalone initial investigation was not recovered, so no empty experiment or fabricated script is included.

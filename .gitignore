@@ -1,0 +1,32 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+build/
+dist/
+# Local and private files
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.parquet
+*.pkl
+*.joblib
+raw/
+data/
+cache/
+local_data/
+local_runs/
+new_audit_output/
+
+# Local research outputs
+*.zip
+*.parquet
+.ipynb_checkpoints/

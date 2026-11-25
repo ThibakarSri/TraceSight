@@ -1,0 +1,28 @@
+[
+  {
+    "scope": {
+      "incident": "SYNTH-01",
+      "service": "Payment",
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "bbbbbbbbbbbbbbbb",
+      "operation": "charge_simulated",
+      "attempt": "A1"
+    },
+    "event": "handler_started",
+    "record_id": "E1",
+    "emitter": "controlled-fixture-1"
+  },
+  {
+    "scope": {
+      "incident": "SYNTH-01",
+      "service": "Payment",
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "bbbbbbbbbbbbbbbb",
+      "operation": "charge_simulated",
+      "attempt": "A1"
+    },
+    "event": "operation_succeeded",
+    "record_id": "E2",
+    "emitter": "controlled-fixture-1"
+  }
+]

@@ -1,0 +1,4 @@
+variant,retained_records,entry,completion,compatible_histories,decision,stable_first,undominated_candidates,min_checkout_minus_payment,min_payment_minus_checkout
+original,2,yes,yes,1,stable,Checkout,Checkout,4.0,-4.0
+masked,1,yes,unknown,2,ambiguous,,Checkout;Payment,-3.0,-4.0
+restored,2,yes,yes,1,stable,Checkout,Checkout,4.0,-4.0

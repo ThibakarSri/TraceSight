@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracesight-research"
+version = "0.1.0"
+description = "Research prototype for evidence-constrained service ranking"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+data = ["pandas>=2.2,<4", "pyarrow>=18,<30"]
+dev = ["pytest>=8,<10"]
+ml = ["pandas>=2.2,<4", "pyarrow>=18,<30", "numpy>=1.26,<3", "scikit-learn>=1.5,<2"]
+
+[project.scripts]
+tracesight = "tracesight.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

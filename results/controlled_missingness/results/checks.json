@@ -1,0 +1,17 @@
+{
+  "fixture returned success": true,
+  "exactly one observation removed": true,
+  "entry survives masking": true,
+  "completion becomes unknown": true,
+  "history count expands 1 to 2": true,
+  "original stable Checkout": true,
+  "masked ambiguous with two rivals": true,
+  "restored logical result matches original": true,
+  "scorer fixed across variants": true,
+  "masked sources exclude hidden record": true,
+  "wrong retry success rejected": true,
+  "unreviewed emitter rejected": true,
+  "no success witness emitted on unsuccessful fixture path": true,
+  "missing attempt rejected": true,
+  "absence does not imply failure": true
+}

@@ -1,0 +1,134 @@
+{
+  "scope": "synthetic_controlled_masking_only",
+  "examined_assignments": 4,
+  "compatible_states": 2,
+  "complete": true,
+  "seconds": 4.346100013208343e-05,
+  "sources": {
+    "E1": "Synthetic observed record E1: handler_started",
+    "WR-01": "Reviewed fixture.py; version controlled-fixture-1; SHA256 c872c9c2c6001700f69ed27e9fcbc85e7f4691b0bf7348840ac94a7c13d1fc18",
+    "ORDER": "Declared fixture model: successful completion requires entry; no terminal-failure claim from no completion.",
+    "SCORE": "Fixed illustrative scores selected for the software test only; not calibrated or learned."
+  },
+  "constraint_sources": {
+    "witness_0_handler_started": [
+      "E1",
+      "WR-01"
+    ],
+    "stage_order": [
+      "ORDER"
+    ]
+  },
+  "score_definition": {
+    "base": {
+      "Checkout": 6.0,
+      "Payment": 2.0
+    },
+    "terms": [
+      {
+        "service": "Payment",
+        "when": [
+          [
+            "payment.entered",
+            "yes"
+          ],
+          [
+            "payment.completed",
+            "no"
+          ]
+        ],
+        "value": 7.0,
+        "sources": [
+          "SCORE"
+        ]
+      }
+    ]
+  },
+  "guarantee": "Relative to supplied constraints and scorer only; not root correctness",
+  "status": "ambiguous",
+  "stable_first": [],
+  "undominated_candidates": [
+    "Checkout",
+    "Payment"
+  ],
+  "comparisons": [
+    {
+      "left": "Checkout",
+      "right": "Payment",
+      "minimum_margin": -3.0,
+      "always_above": false,
+      "minimising_state": {
+        "payment.entered": "yes",
+        "payment.completed": "no"
+      }
+    },
+    {
+      "left": "Payment",
+      "right": "Checkout",
+      "minimum_margin": -4.0,
+      "always_above": false,
+      "minimising_state": {
+        "payment.entered": "yes",
+        "payment.completed": "yes"
+      }
+    }
+  ],
+  "score_ranges": {
+    "Checkout": [
+      6.0,
+      6.0
+    ],
+    "Payment": [
+      2.0,
+      9.0
+    ]
+  },
+  "baselines": {
+    "observed_only": [
+      "Checkout",
+      "Payment"
+    ],
+    "first_feasible_state": [
+      "Payment",
+      "Checkout"
+    ],
+    "independent_range_stable_first": []
+  },
+  "tie_policy": "Baseline lists use service-name tie breaks; ties are not strict dominance",
+  "compatible_histories": [
+    {
+      "state": {
+        "payment.entered": "yes",
+        "payment.completed": "no"
+      },
+      "scores": {
+        "Checkout": 6.0,
+        "Payment": 9.0
+      },
+      "winners": [
+        "Payment"
+      ]
+    },
+    {
+      "state": {
+        "payment.entered": "yes",
+        "payment.completed": "yes"
+      },
+      "scores": {
+        "Checkout": 6.0,
+        "Payment": 2.0
+      },
+      "winners": [
+        "Checkout"
+      ]
+    }
+  ],
+  "execution_facts": {
+    "payment.entered": "yes",
+    "payment.completed": "unknown"
+  },
+  "observed_record_ids": [
+    "E1"
+  ],
+  "last_verified_progress": "handler_entry"
+}

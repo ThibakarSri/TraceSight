@@ -1,0 +1,27 @@
+{
+  "dataset": "cached ops-lite abnormal logs and spans",
+  "sampled_cases": 90,
+  "processed_cases": 90,
+  "failed_cases": [],
+  "train_cases": 62,
+  "held_out_cases": 28,
+  "train_service_rows": 1133,
+  "held_out_service_rows": 666,
+  "root_present_train": 45,
+  "root_present_test": 23,
+  "logistic_regression": {
+    "evaluable_cases": 23,
+    "top1": 0.08695652173913043,
+    "top3": 0.43478260869565216,
+    "mrr": 0.3094916034046469
+  },
+  "simple_error_rate": {
+    "evaluable_cases": 23,
+    "top1": 0.17391304347826086,
+    "top3": 0.34782608695652173,
+    "mrr": 0.3335024897963187
+  },
+  "semantic_witnesses_verified": false,
+  "compatible_history_integration": false,
+  "interpretation": "Preliminary observed-service scorer only; no validated full TraceSight inference or external benchmark claim."
+}

@@ -1,0 +1,2 @@
+# Exploratory learned scoring
+Install `python -m pip install -e '.[ml]'` from the root. Run `python experiments/learned_scoring/real_data_pilot.py --root /path/to/raw --manifest /path/to/manifest.jsonl --output local_runs/learned_scoring --max-cases 90` with permitted local input data. See `results/learned_scoring/REPORT.md` for the recorded split, metrics and negative result. This is a separate pilot, not an integrated scorer. The historical 90 incidents are development-exposed.

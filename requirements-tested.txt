@@ -1,0 +1,6 @@
+# Direct packages used for the 29 October 2026 run. Use a fresh virtualenv.
+pandas==2.2.3
+pyarrow==26.0.0
+numpy==2.3.5
+pytest==9.2.0
+setuptools==84.1.0

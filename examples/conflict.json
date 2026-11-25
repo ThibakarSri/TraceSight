@@ -1,0 +1,68 @@
+{
+  "services": [
+    "Payment",
+    "Bank"
+  ],
+  "variables": [
+    {
+      "name": "shared",
+      "domain": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "name": "low",
+      "variables": [
+        "shared"
+      ],
+      "allowed": [
+        [
+          "low"
+        ]
+      ],
+      "sources": [
+        "definition"
+      ]
+    },
+    {
+      "name": "high",
+      "variables": [
+        "shared"
+      ],
+      "allowed": [
+        [
+          "high"
+        ]
+      ],
+      "sources": [
+        "definition"
+      ]
+    }
+  ],
+  "base": {
+    "Payment": 2,
+    "Bank": 0
+  },
+  "terms": [
+    {
+      "service": "Bank",
+      "when": [
+        [
+          "shared",
+          "high"
+        ]
+      ],
+      "value": 10,
+      "sources": [
+        "definition"
+      ]
+    }
+  ],
+  "sources": {
+    "definition": "Software fixture: base scores and terms are illustrative assumptions, not empirical fault evidence."
+  },
+  "scope": "software_test_only"
+}

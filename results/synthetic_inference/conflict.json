@@ -1,0 +1,50 @@
+{
+  "scope": "software_test_only",
+  "examined_assignments": 2,
+  "compatible_states": 0,
+  "complete": true,
+  "seconds": 7.497999990846438e-05,
+  "sources": {
+    "definition": "Software fixture: base scores and terms are illustrative assumptions, not empirical fault evidence."
+  },
+  "constraint_sources": {
+    "low": [
+      "definition"
+    ],
+    "high": [
+      "definition"
+    ]
+  },
+  "score_definition": {
+    "base": {
+      "Payment": 2.0,
+      "Bank": 0.0
+    },
+    "terms": [
+      {
+        "service": "Bank",
+        "when": [
+          [
+            "shared",
+            "high"
+          ]
+        ],
+        "value": 10.0,
+        "sources": [
+          "definition"
+        ]
+      }
+    ]
+  },
+  "guarantee": "Relative to supplied constraints and scorer only; not root correctness",
+  "status": "conflict",
+  "stable_first": [],
+  "comparisons": [],
+  "run": {
+    "version": "0.1.0",
+    "python": "3.12.14",
+    "elapsed_seconds": 0.0010378269998909673,
+    "peak_python_allocated_bytes": 7638,
+    "memory_note": "tracemalloc excludes some native-library allocations; not peak RSS"
+  }
+}
